@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Band</title>
+		<link rel="stylesheet" href="style1.css">
+	</head>
+	<body onLoad='myFunction()'>
+		<div id="loader"></div>
+		<div id="dot"></div>
+		<div style="display:none;" id="myDiv" class="animate-bottom">
+			<div class="header">
+				<h1><strong>Place Vendome</strong></h1>
+				
+			</div>
+			<img class="floatright paddingleft" src="thunder.jpg">
+			<img class="floatright paddingleft" src="placevendomeclosecd.jpg">
+			<img class="floatright paddingleft" src="placevendomestreets.jpg">
+			<img class="floatright" src="scan.jpg">
+			<p><i>Rock</i></p>
+			<h3>Notable Songs</h3>
+				<ul>
+					<li>I Will Be Waiting</li>
+					<li>A Scene In Replay</li>
+					<li>Too Late</li>
+					<li>Place Vendome</li>
+				</ul>
+			<h3>Why I like Place Vendome:</h3>
+			<p>The band features some of my favorite musiciens, including Micheal Kiske on lead vocals with a impressive almost 4 octave range and clear voice. The guitarist, bass player, and drummer are equally as skilled, allowing the band to make a range of different type of music, from hard rock to melodic softer rock, and from fast to ballad. With each of the 4 albums having a different style and focus, one can always find just the type of rock one is looking for.</p>
+		</div>
+		<script>
+			var myVar;
+			function myFunction() {myVar = setTimeout(showPage, 1);}
+			function showPage() {
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("myDiv").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
