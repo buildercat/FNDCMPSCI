@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--this is an image gallery template made by Noah Edmiston-->
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+		<title></title>
+		<style>
+
+
+		#loader {
+  position: absolute;
+  left: 49%;
+  top: 42.5%;
+  z-index: 1;
+  width: 2vw;
+  height: 15vw;
+  background-color:#795794;
+  
+  /* border-top: 16px solid */
+  
+  -webkit-animation: spin 2s ease-in-out infinite;
+  animation: spin 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+.arrowup{
+	left:0%;
+	height:auto;
+	width:4%;
+}
+.overlay{
+	z-index:2;
+	position:absolute;
+	top:80px;
+	left:80px;
+	opacity:0;
+}
+.overlaytext{
+	color:white;
+	
+	
+}
+.fade-in-image:hover{
+	animation: hover 3s;
+	opacity:.5;
+}
+img:hover~#overlay1{
+	animation: fade-in-text 3s;
+}
+@keyframes fade-in-text{
+	0%{opacity: 0;}
+	100%{opacity:1;}
+}
+@keyframes hover{
+	0%{opacity: 1;}
+	100%{opacity:0.5;}
+}
+img:hover ~ #overlay1{
+	opacity:1;
+	
+}
+.background{
+	background-color:black;
+}
+</style>
+	</head>
+	<body onload="myFunction()">
+	<div id="loader"></div>
+	<div id="dot"></div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+		<div class="card card-inverse">
+			<img class="img-fluid border-radius:0; background" src="https://wallpapersite.com/images/wallpapers/mountains-2880x1800-lg-nexus-android-stock-4k-2538.jpg" >
+			<div class="card-img-overlay" style=" ">
+			<h4 class="card-title" style="text-align:center; top:7%; color:white; font-size:500%;">Lorem</h4>
+			</div>
+		</div>
+		<nav class = "navbar-expand-sm bg-light navbar-light sticky-top">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">PlaceHolder 1</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Placeholder 2</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Placeholder 3</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row" style="padding-bottom:5%;padding-right:.5%;padding-left:.5%;">
+			<div class="col-lg-6 col-sm-12" style = >
+				<div class="card">
+					
+					<img class="card-image-top img-fluid hovering fade-in-image"  src="https://wallpaperscraft.com/image/pier_dock_sea_dusk_shore_118549_3840x2400.jpg">
+					<div id="overlay1" class="overlay">
+						<h2  class="overlaytext">Lorem</h2>
+						<p class="overlaytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">Lorem Ipsum</h3>
+						<p = class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan neque in magna sodales pellentesque luctus non metus. Aliquam accumsan sem eros, quis varius erat fermentum ut. Curabitur eu erat tellus. Vivamus non velit leo. Proin suscipit vitae nisi vitae molestie. Suspendisse aliquam egestas sem.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12" style = >
+				<div class="card">
+					<img class="card-image-top img-fluid fade-in-image"  src="https://wallpaperscraft.com/image/pier_dock_sea_dusk_shore_118549_3840x2400.jpg">
+					<div id="overlay1" class="overlay">
+						<h2  class="overlaytext">Lorem</h2>
+						<p class="overlaytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>
+					</div>
+					<div class="card-body" >
+						<h3 class="card-title">Lorem Ipsum</h3>
+						<p = class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan neque in magna sodales pellentesque luctus non metus. Aliquam accumsan sem eros, quis varius erat fermentum ut. Curabitur eu erat tellus. Vivamus non velit leo. Proin suscipit vitae nisi vitae molestie. Suspendisse aliquam egestas sem.</p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-lg-6 col-sm-12" style = >
+				<div class="card">
+					<img class="card-image-top img-fluid fade-in-image"  src="https://wallpaperscraft.com/image/pier_dock_sea_dusk_shore_118549_3840x2400.jpg">
+					<div id="overlay1" class="overlay">
+						<h2  class="overlaytext">Lorem</h2>
+						<p class="overlaytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">Lorem Ipsum</h3>
+						<p = class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan neque in magna sodales pellentesque luctus non metus. Aliquam accumsan sem eros, quis varius erat fermentum ut. Curabitur eu erat tellus. Vivamus non velit leo. Proin suscipit vitae nisi vitae molestie. Suspendisse aliquam egestas sem.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-12" style = >
+				<div class="card">
+					<img class="card-image-top img-fluid fade-in-image"  src="https://wallpaperscraft.com/image/pier_dock_sea_dusk_shore_118549_3840x2400.jpg">
+					<div id="overlay1" class="overlay">
+						<h2  class="overlaytext">Lorem</h2>
+						<p class="overlaytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>
+					</div>
+					<div class="card-body" >
+						<h3 class="card-title">Lorem Ipsum</h3>
+						<p = class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan neque in magna sodales pellentesque luctus non metus. Aliquam accumsan sem eros, quis varius erat fermentum ut. Curabitur eu erat tellus. Vivamus non velit leo. Proin suscipit vitae nisi vitae molestie. Suspendisse aliquam egestas sem.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card" style="">
+			<img  class="card-img-top img-fluid" src="https://wallpaperscraft.com/image/pier_dock_sea_dusk_shore_118549_3840x2400.jpg">
+			<div id="overlay1" class="overlay">
+						<h2  class="overlaytext">Lorem</h2>
+						<p class="overlaytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<p>
+			</div>
+			<div class="card-body">
+				<h4 class="card-title">Lorem Ipsum</h4>
+				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi orci elit, pulvinar non metus convallis, laoreet facilisis diam. Vestibulum sit amet pulvinar lorem. Vestibulum ante ipsum primis in faucibus orci.</p>
+			</div>
+		</div>
+		</div>
+		<script>
+			var myVar;
+			function myFunction() {myVar = setTimeout(showPage, 1000);}
+			function showPage() {
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("myDiv").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
